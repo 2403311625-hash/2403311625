@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Pengelolaan Keuangan UMKM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Aplikasi Pengelolaan Keuangan Toko Kelontong</h1>
+
+  <section id="input-form">
+    <h2>Input Transaksi</h2>
+    <form id="transaction-form">
+      <label for="type">Jenis:</label>
+      <select id="type" required>
+        <option value="pemasukan">Pemasukan</option>
+        <option value="pengeluaran">Pengeluaran</option>
+      </select>
+
+      <label for="description">Keterangan:</label>
+      <input type="text" id="description" required>
+
+      <label for="amount">Jumlah (Rp):</label>
+      <input type="number" id="amount" required>
+
+      <button type="submit">Tambah</button>
+    </form>
+  </section>
+
+  <section id="transaction-table">
+    <h2>Daftar Transaksi</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Jenis</th>
+          <th>Keterangan</th>
+          <th>Jumlah (Rp)</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Data transaksi akan muncul di sini -->
+      </tbody>
+    </table>
+  </section>
+
+  <section id="summary">
+    <h2>Ringkasan</h2>
+    <p>Pemasukan: <span id="total-income">0</span></p>
+    <p>Pengeluaran: <span id="total-expense">0</span></p>
+    <p><strong>Saldo Akhir: <span id="balance">0</span></strong></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
